@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Losing Customers on WhatsApp | 24/7 AI Automation</title>
+  <style>
+    /* RESET */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #f3f4f6;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.05">💬</text></svg>') repeat;
+      opacity: 0.1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .hero .subheadline {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+    .hero .special-badge {
+      display: inline-block;
+      background: #dc2626;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      margin-bottom: 25px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 18px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .btn-whatsapp { 
+      background: #25D366; 
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-whatsapp:hover { 
+      background: #128C7E;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .btn-secondary { 
+      background: white; 
+      color: #059669;
+      border: 2px solid white;
+    }
+    .btn-secondary:hover { 
+      background: transparent;
+      color: white;
+    }
+
+    /* PROBLEM SECTION */
+    .problem {
+      background: #fee2e2;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .problem h2 {
+      color: #dc2626;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+    .problem-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+      text-align: left;
+    }
+    .problem-item {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.1);
+    }
+    .problem-item span {
+      font-size: 2rem;
+    }
+    .problem-item p {
+      font-size: 1.1rem;
+      color: #374151;
+    }
+
+    /* SOLUTION SECTION */
+    .section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #059669;
+    }
+    .section > p {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #374151;
+      font-size: 1.15rem;
+    }
+
+    /* FEATURES */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid #10b981;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+      color: #111827;
+    }
+    .card p {
+      color: #6b7280;
+      line-height: 1.7;
+    }
+
+    /* PRICING SECTION */
+    .pricing {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      padding: 70px 20px;
+    }
+    .pricing h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 40px;
+      color: #059669;
+    }
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .pricing-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: scale(1.05);
+    }
+    .pricing-card.featured {
+      border: 3px solid #10b981;
+      transform: scale(1.05);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #dc2626;
+      color: white;
+      padding: 5px 20px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    .pricing-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+    .price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #059669;
+      margin: 20px 0;
+    }
+    .price-note {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 25px;
+    }
+    .pricing-features {
+      text-align: left;
+      margin: 25px 0;
+    }
+    .pricing-features li {
+      list-style: none;
+      padding: 10px 0;
+      border-bottom: 1px solid #f3f4f6;
+      color: #374151;
+    }
+    .pricing-features li::before {
+      content: "✅ ";
+      margin-right: 10px;
+    }
+
+    /* GUARANTEE SECTION */
+    .guarantee {
+      background: #fef3c7;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .guarantee h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #92400e;
+    }
+    .guarantee p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #78350f;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      padding: 70px 20px;
+      background: white;
+    }
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 50px;
+      color: #059669;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .testimonial {
+      background: #f9fafb;
+      padding: 30px;
+      border-radius: 12px;
+      border-left: 4px solid #10b981;
+    }
+    .testimonial-text {
+      font-style: italic;
+      color: #374151;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    .testimonial-author {
+      font-weight: bold;
+      color: #059669;
+    }
+
+    /* CTA SECTION */
+    .cta {
+      background: linear-gradient(135deg, #059669, #10b981);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .cta p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    /* CONTACT SECTION */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+    .contact-card {
+      background: #f9fafb;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      border: 2px solid #e5e7eb;
+      transition: all 0.3s ease;
+    }
+    .contact-card:hover {
+      border-color: #10b981;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(16, 185, 129, 0.1);
+    }
+    .contact-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .contact-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+    .contact-card p {
+      margin: 5px 0;
+      color: #374151;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero .subheadline { font-size: 1.1rem; }
+      .btn { padding: 14px 25px; font-size: 1rem; }
+      .section h2 { font-size: 1.8rem; }
+      .price { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="special-badge">🔥 WEEKEND SPECIAL - First 5 Clients Only!</div>
+      <h1>Stop Losing Customers Because You're Too Busy to Respond on WhatsApp</h1>
+      <p class="subheadline">24/7 AI-Powered WhatsApp Automation for SA Businesses</p>
+      <p>Never miss a booking, order, or inquiry again - even during load shedding</p>
+      <a href="https://wa.me/27672994326?text=Hi!%20I'm%20interested%20in%20WhatsApp%20automation%20for%20my%20business" class="btn btn-whatsapp">
+        💬 Book Free Demo on WhatsApp
+      </a>
+      <a href="#pricing" class="btn btn-secondary">See Pricing</a>
+    </div>
+  </div>
+
+  <!-- Problem Section -->
+  <div class="problem">
+    <h2>Sound Familiar?</h2>
+    <div class="problem-list">
+      <div class="problem-item">
+        <span>😫</span>
+        <p><strong>Waste 2-3 hours daily</strong> answering the same WhatsApp questions over and over</p>
+      </div>
+      <div class="problem-item">
+        <span>💸</span>
+        <p><strong>Lose customers</strong> because you can't respond fast enough (they go to competitors)</p>
+      </div>
+      <div class="problem-item">
+        <span>⚡</span>
+        <p><strong>Miss sales during load shedding</strong> and after business hours when customers are most active</p>
+      </div>
+      <div class="problem-item">
+        <span>📱</span>
+        <p><strong>Can't keep up</strong> with 50-200+ messages per day while running your business</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Solution Section -->
+  <div class="section">
+    <h2>The Solution: AI WhatsApp Automation</h2>
+    <p>Your customers get instant responses 24/7. You get your time back. It's that simple.</p>
+    
+    <div class="features">
+      <div class="card">
+        <span class="card-icon">⚡</span>
+        <h3>Instant Responses</h3>
+        <p>AI answers customer questions instantly - pricing, hours, services, locations. No more "I'll get back to you".</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📅</span>
+        <h3>Automated Bookings</h3>
+        <p>Customers can book appointments, reserve tables, or schedule services directly through WhatsApp - automatically synced to your calendar.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🔋</span>
+        <h3>Works During Load Shedding</h3>
+        <p>Cloud-based system runs 24/7 even when your power is out. Never miss another sale because of Eskom.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🌍</span>
+        <h3>Multi-Language Support</h3>
+        <p>Responds in English, Afrikaans, Zulu, or any language your customers prefer. AI adapts automatically.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📊</span>
+        <h3>Smart Analytics</h3>
+        <p>See what customers ask most, peak inquiry times, and conversion rates. Optimize your business with data.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🤝</span>
+        <h3>Human Handoff</h3>
+        <p>Complex questions get forwarded to you. AI handles 80%, you handle the important 20%.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="pricing" id="pricing">
+    <h2>Simple, Transparent Pricing</h2>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="price">R2,500</div>
+        <div class="price-note">One-time setup + R1,200/month</div>
+        <ul class="pricing-features">
+          <li>Custom AI trained on your business</li>
+          <li>Up to 500 messages/month</li>
+          <li>Basic FAQ automation</li>
+          <li>WhatsApp Business integration</li>
+          <li>48-hour setup</li>
+          <li>Email support</li>
+        </ul>
+        <a href="https://wa.me/27672994326?text=I'm%20interested%20in%20the%20Starter%20package" class="btn btn-whatsapp">Get Started</a>
+      </div>
+      
+      <div class="pricing-card featured">
+        <div class="pricing-badge">🔥 MOST POPULAR</div>
+        <h3>Professional</h3>
+        <div class="price">R3,500</div>
+        <div class="price-note">One-time setup + R2,000/month</div>
+        <ul class="pricing-features">
+          <li>Everything in Starter, plus:</li>
+          <li>Unlimited messages</li>
+          <li>Appointment booking automation</li>
+          <li>Multi-language support</li>
+          <li>Analytics dashboard</li>
+          <li>24-hour setup</li>
+          <li>WhatsApp + Phone support</li>
+        </ul>
+        <a href="https://wa.me/27672994326?text=I'm%20interested%20in%20the%20Professional%20package" class="btn btn-whatsapp">Get Started</a>
+      </div>
+      
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <div class="price-note">Contact for pricing</div>
+        <ul class="pricing-features">
+          <li>Everything in Professional, plus:</li>
+          <li>Multiple WhatsApp numbers</li>
+          <li>CRM integration</li>
+          <li>Advanced workflows</li>
+          <li>Priority support</li>
+          <li>Dedicated account manager</li>
+          <li>Custom AI training</li>
+        </ul>
+        <a href="https://wa.me/27672994326?text=I'm%20interested%20in%20Enterprise%20pricing" class="btn btn-whatsapp">Contact Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guarantee Section -->
+  <div class="guarantee">
+    <h2>💯 30-Day Money-Back Guarantee</h2>
+    <p>If you don't save at least 10 hours in the first month, or your system doesn't work as promised, we'll refund every cent. No questions asked.</p>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="testimonials">
+    <h2>What SA Business Owners Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">"I was spending 4 hours a day on WhatsApp messages. Now the AI handles everything and I focus on actual haircuts. Game changer during load shedding!"</p>
+        <p class="testimonial-author">— Sarah M., Salon Owner, Johannesburg</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"We were missing 20+ takeaway orders per week because we couldn't respond fast enough. Now we don't miss a single one. Already paid for itself."</p>
+        <p class="testimonial-author">— David L., Restaurant Owner, Cape Town</p>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"The booking automation is incredible. Clients book their gym sessions at 11pm, and it's all sorted by morning. I literally do nothing."</p>
+        <p class="testimonial-author">— Mike P., Gym Owner, Durban</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="cta">
+    <h2>Ready to Stop Wasting Time on WhatsApp?</h2>
+    <p>Get set up in 48 hours. Start saving 10+ hours per week immediately.</p>
+    <p style="font-size: 1.4rem; font-weight: bold; margin-bottom: 25px;">🔥 Weekend Special: R2,500 setup (normally R3,500) - First 5 clients only</p>
+    <a href="https://wa.me/27672994326?text=Hi!%20I%20want%20the%20weekend%20special%20-%20let's%20get%20started!" class="btn btn-whatsapp">
+      💬 Claim Your Spot Now
+    </a>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="section" style="background: white;">
+    <h2>Get In Touch</h2>
+    <p>Have questions? Ready to automate your WhatsApp? Let's chat.</p>
+    
+    <div class="contact-grid">
+      <div class="contact-card">
+        <span class="contact-icon">💬</span>
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/27672994326" style="color: #059669; text-decoration: none; font-weight: bold;">+27 67 299 4326</a></p>
+        <p style="font-size: 0.9rem; color: #6b7280;">Fastest response time</p>
+      </div>
+      
+      <div class="contact-card">
+        <span class="contact-icon">📧</span>
+        <h3>Email</h3>
+        <p><a href="mailto:zusiyanda@gmail.com" style="color: #059669; text-decoration: none; font-weight: bold;">zusiyanda@gmail.com</a></p>
+        <p style="font-size: 0.9rem; color: #6b7280;">We reply within 24 hours</p>
+      </div>
+      
+      <div class="contact-card">
+        <span class="contact-icon">📱</span>
+        <h3>Phone</h3>
+        <p style="color: #059669; font-weight: bold;">+27 67 299 4326</p>
+        <p style="font-size: 0.9rem; color: #6b7280;">Mon-Fri: 9am - 6pm</p>
+      </div>
+      
+      <div class="contact-card">
+        <span class="contact-icon">📍</span>
+        <h3>Location</h3>
+        <p style="color: #059669; font-weight: bold;">Johannesburg, SA</p>
+        <p style="font-size: 0.9rem; color: #6b7280;">Serving all of South Africa</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>WhatsApp Automation for SA Businesses</strong></p>
+    <p>Serving Johannesburg, Cape Town, Durban, Pretoria & all of South Africa</p>
+    <div style="margin: 20px 0; padding-top: 20px; border-top: 1px solid #374151;">
+      <p style="margin: 5px 0;">📧 <a href="mailto:zusiyanda@gmail.com" style="color: #10b981; text-decoration: none;">zusiyanda@gmail.com</a></p>
+      <p style="margin: 5px 0;">💬 <a href="https://wa.me/27672994326" style="color: #10b981; text-decoration: none;">WhatsApp: +27 67 299 4326</a></p>
+    </div>
+    <p style="margin-top: 15px; opacity: 0.7;">© 2025 TaskBiotics AI Automation. All rights reserved.</p>
+  </footer>
+  <!-- BioticBot Web Widget + WhatsApp button -->
+<div id="bioticbot-widget" style="position:fixed;right:20px;bottom:90px;z-index:9999;font-family:Arial;width:320px;">
+  <div id="bioticbot-toggle" style="background:#25d366;color:#fff;padding:10px 14px;border-radius:12px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.15);">
+    Chat with BioticBot
+  </div>
+  <div id="bioticbot-panel" style="display:none;background:#fff;border-radius:8px;padding:10px;margin-top:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12);">
+    <div id="bioticbot-messages" style="max-height:260px;overflow:auto;padding:6px;"></div>
+    <div style="display:flex;margin-top:8px;">
+      <input id="bioticbot-input" placeholder="Type a message..." style="flex:1;padding:8px;border:1px solid #eee;border-radius:6px;" />
+      <button id="bioticbot-send" style="margin-left:8px;padding:8px 10px;background:#25d366;color:#fff;border:none;border-radius:6px;cursor:pointer;">Send</button>
+    </div>
+    <div style="margin-top:8px;font-size:12px;color:#666;">
+      <a id="bioticbot-whatsapp" href="#" target="_blank">Continue on WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const API = "RENDER_API_URL"; // e.g. https://biotic-automation.onrender.com
+  const renderApiRespond = API + "/api/respond";
+  const whatsappPhone = "27672994326"; // your business number (no +) for click-to-chat; update if you want
+
+  const toggle = document.getElementById("bioticbot-toggle");
+  const panel = document.getElementById("bioticbot-panel");
+  const messages = document.getElementById("bioticbot-messages");
+  const input = document.getElementById("bioticbot-input");
+  const sendBtn = document.getElementById("bioticbot-send");
+  const waLink = document.getElementById("bioticbot-whatsapp");
+
+  toggle.onclick = () => panel.style.display = panel.style.display === "none" ? "block" : "none";
+  waLink.href = `https://wa.me/${whatsappPhone}?text=Hi%20BioticBot!`;
+
+  function addMessage(text, from="bot"){
+    const div = document.createElement("div");
+    div.style.padding = "6px 8px";
+    div.style.margin = "6px 0";
+    div.style.borderRadius = "8px";
+    div.style.maxWidth = "85%";
+    if(from === "bot"){
+      div.style.background = "#f1f1f1";
+      div.style.marginLeft = "0";
+      div.style.alignSelf = "flex-start";
+    } else {
+      div.style.background = "#25d366";
+      div.style.color = "#fff";
+      div.style.marginLeft = "auto";
+    }
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  async function sendMessage(){
+    const text = input.value.trim();
+    if(!text) return;
+    addMessage(text, "user");
+    input.value = "";
+
+    try {
+      const res = await fetch(renderApiRespond, {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({ message: text, source: "website" })
+      });
+      const data = await res.json();
+      addMessage(data.reply || "Sorry, no reply.");
+    } catch(err){
+      addMessage("Network error — try again later.");
+    }
+  }
+
+  sendBtn.onclick = sendMessage;
+  input.addEventListener("keypress", (e)=> { if(e.key === "Enter"){ sendMessage(); } });
+})();
+</script>
+
+</body>
+</html>

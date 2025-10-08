@@ -1,0 +1,8 @@
+flask
+flask-cors
+openai
+twilio
+supabase
+gunicorn
+apscheduler
+python-dotenv
