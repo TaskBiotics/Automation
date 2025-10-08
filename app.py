@@ -52,6 +52,5 @@ def whatsapp_webhook():
 
 
 if __name__ == '__main__':
-    # Use port from environment variable for Railway or local 5000
     port = int(os.getenv("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
